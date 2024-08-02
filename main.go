@@ -16,6 +16,9 @@ import (
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", handlers.Firsthandler)
+	r.HandleFunc("/userdata/{user}", handlers.GetUserData)
+	r.HandleFunc("/roomdata/{room}", handlers.GetRoom)
+	r.HandleFunc("/ownEnter", handlers.PostOwnData)
 
 	srv := &http.Server{
 		Handler: r,
