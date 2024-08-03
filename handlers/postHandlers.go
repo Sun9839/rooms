@@ -12,3 +12,7 @@ func PostOwnData(w http.ResponseWriter, r *http.Request){
 		fmt.Println("POSTOwnData")
 	}
 }
+
+func Registration(w http.ResponseWriter, r *http.Request){
+	fmt.Fprintf(w, "Registration")
+}

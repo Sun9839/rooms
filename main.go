@@ -19,6 +19,7 @@ func main() {
 	r.HandleFunc("/userdata/{user}", handlers.GetUserData)
 	r.HandleFunc("/roomdata/{room}", handlers.GetRoom)
 	r.HandleFunc("/ownEnter", handlers.PostOwnData)
+	r.HandleFunc("/registration", handlers.Registration)
 
 	srv := &http.Server{
 		Handler: r,
