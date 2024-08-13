@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"fmt"
 
-	//"rooms-server.pet/midlwares"
+	"rooms-server.pet/midlwares"
 )
 
 func PostOwnData(w http.ResponseWriter, r *http.Request){
@@ -14,5 +14,7 @@ func PostOwnData(w http.ResponseWriter, r *http.Request){
 }
 
 func Registration(w http.ResponseWriter, r *http.Request){
-	fmt.Fprintf(w, "Registration")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Content-Type", "application/json")
+	midlwares.Registration(w, r)
 }

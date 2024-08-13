@@ -2,6 +2,7 @@ package midlwares
 
 import (
 	"net/http"
+	"fmt"
 )
 
 type RegisterRequest struct {
@@ -13,5 +14,5 @@ type RegisterRequest struct {
 }
 
 func Registration(w http.ResponseWriter, r *http.Request) {
-	
+	fmt.Println("aaa")
 }
